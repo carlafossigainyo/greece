@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grecian Escape | Official Booking</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -15,38 +15,37 @@
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#destinations">Destinations</a></li>
-                <li class="btn-nav"><a href="#reservation">My Booking</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="banner">
         <div class="banner-content container">
-            <span class="subtitle">Limited Time Offer</span>
-            <h1>Discover Greece like never before</h1>
-            <p>A land of ancient history, turquoise waters, and forgotten legends.</p>
-            <a href="#destinations" class="btn-cta">Explore Now</a>
+            <span class="subtitle">OFFRE LIMITÉE</span>
+            <h1>La Grèce comme vous ne l'avez jamais vue</h1>
+            <p>Histoire ancienne, eaux turquoises et paysages de rêve.</p>
+            <a href="#destinations" class="btn-cta">Explorer maintenant</a>
         </div>
     </header>
 
     <main>
         <section id="destinations" class="destinations container">
             <div class="text-block centered">
-                <span class="highlight">Our curation</span>
-                <h2>Explore Legendary Cities</h2>
-                <p>From the wild nightlife to the calm of sunrises, pick your next story.</p>
+                <span class="highlight">Notre sélection</span>
+                <h2>Villes Légendaires</h2>
+                <p>Choisissez votre prochaine aventure parmi nos perles de la Méditerranée.</p>
             </div>
 
             <div class="cards-grid">
                 <div class="card" onclick="showInfo('mykonos')">
-                    <img src="mykonos.jpg" alt="Vibrating Mykonos">
+                    <img src="mykonos.jpg" alt="Mykonos">
                     <div class="card-overlay">
                         <h3>Mykonos</h3>
                     </div>
                 </div>
 
                 <div class="card" onclick="showInfo('santorini')">
-                    <img src="santorin.jpg" alt="Romantic Santorini">
+                    <img src="santorin.jpg" alt="Santorini">
                     <div class="card-overlay">
                         <h3>Santorini</h3>
                     </div>
@@ -59,10 +58,10 @@
                 <div class="info-text">
                     <h2 id="city-title"></h2>
                     <p id="city-text"></p>
-                    <a href="javascript:void(0)" onclick="openForm()" class="btn-booking-start">Book this trip</a>
+                    <button onclick="openForm()" class="btn-booking-trigger">Réserver ce voyage</button>
                 </div>
                 <div class="info-image">
-                    <img id="city-img" src="" alt="Selected destination">
+                    <img id="city-img" src="" alt="Destination">
                 </div>
             </div>
         </section>
@@ -70,16 +69,15 @@
         <div id="reservation" class="booking-modal-overlay hidden">
             <div class="booking-modal">
                 <span class="close-modal" onclick="closeForm()">&times;</span>
-                <h2>Book your dream trip ✈️</h2>
+                <h2>Réservez votre séjour ✈️</h2>
                 <form class="booking-form" onsubmit="confirmBooking(event)">
-                    <input type="text" placeholder="Your Full Name" required>
-                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="text" placeholder="Votre nom complet" required>
+                    <input type="email" placeholder="Votre adresse email" required>
                     <select id="booking-select" required>
-                        <option value="" disabled selected>Choose your destination</option>
                         <option value="mykonos">Mykonos</option>
                         <option value="santorini">Santorini</option>
                     </select>
-                    <button type="submit" class="btn-final">Confirm Reservation</button>
+                    <button type="submit" class="btn-final">Confirmer la demande</button>
                 </form>
             </div>
         </div>
@@ -87,7 +85,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023 Grecian Escape. All rights reserved.</p>
+            <p>&copy; 2026 Grecian Escape. Voyagez avec style.</p>
         </div>
     </footer>
 
