@@ -3,69 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> <title>Discover Greece | Luxury Travel</title>
+    <title>Grecian Escape | Official Booking</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="#" class="logo">GRECIAN ESCAPE</a>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li class="btn-nav"><a href="#reservation">My Booking</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="banner">
-        <div class="container">
-            <h1>Discover Greece 🇬🇷</h1>
-            <p>Experience the magic of the Mediterranean</p>
-            <a href="#reservation" class="btn-primary">Book your dream trip</a>
+        <div class="banner-content container">
+            <span class="subtitle">Limited Time Offer</span>
+            <h1>Discover Greece like never before</h1>
+            <p>A land of ancient history, turquoise waters, and forgotten legends.</p>
+            <a href="#destinations" class="btn-cta">Explore Now</a>
         </div>
     </header>
 
-    <main class="container">
-        <section class="destinations">
-            <h2 class="section-title">Our Popular Destinations</h2>
+    <main>
+        <section id="destinations" class="destinations container">
+            <div class="text-block centered">
+                <span class="highlight">Our curation</span>
+                <h2>Explore Legendary Cities</h2>
+                <p>From the wild nightlife to the calm of sunrises, pick your next story.</p>
+            </div>
+
             <div class="cards-grid">
                 <div class="card" onclick="showInfo('mykonos')">
-                    <div class="card-img-container">
-                        <img src="mykonos.jpg" alt="Mykonos">
-                    </div>
-                    <div class="card-content">
+                    <img src="mykonos.jpg" alt="Vibrating Mykonos">
+                    <div class="card-overlay">
                         <h3>Mykonos</h3>
-                        <span class="badge">Trendy</span>
                     </div>
                 </div>
 
                 <div class="card" onclick="showInfo('santorini')">
-                    <div class="card-img-container">
-                        <img src="santorin.jpg" alt="Santorini">
-                    </div>
-                    <div class="card-content">
+                    <img src="santorin.jpg" alt="Romantic Santorini">
+                    <div class="card-overlay">
                         <h3>Santorini</h3>
-                        <span class="badge">Romantic</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="info-section" class="hidden">
-            <div class="info-card">
-                <h2 id="city-title"></h2>
-                <p id="city-text"></p>
-                <img id="city-img" src="" alt="Selected city">
+        <section id="info-section" class="info-section hidden">
+            <div class="container info-layout">
+                <div class="info-text">
+                    <h2 id="city-title"></h2>
+                    <p id="city-text"></p>
+                    <a href="javascript:void(0)" onclick="openForm()" class="btn-booking-start">Book this trip</a>
+                </div>
+                <div class="info-image">
+                    <img id="city-img" src="" alt="Selected destination">
+                </div>
             </div>
         </section>
 
-        <section id="reservation" class="booking-section">
-            <div class="form-container">
-                <h2>Book your trip ✈️</h2>
-                <form class="booking-form">
-                    <input type="text" placeholder="Your name" required>
-                    <input type="email" placeholder="Your email" required>
-                    <select>
+        <div id="reservation" class="booking-modal-overlay hidden">
+            <div class="booking-modal">
+                <span class="close-modal" onclick="closeForm()">&times;</span>
+                <h2>Book your dream trip ✈️</h2>
+                <form class="booking-form" onsubmit="confirmBooking(event)">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <select id="booking-select" required>
+                        <option value="" disabled selected>Choose your destination</option>
                         <option value="mykonos">Mykonos</option>
                         <option value="santorini">Santorini</option>
                     </select>
-                    <button type="submit" class="btn-submit">Confirm Booking</button>
+                    <button type="submit" class="btn-final">Confirm Reservation</button>
                 </form>
             </div>
-        </section>
+        </div>
     </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Grecian Escape. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
-</html>
 </html>
