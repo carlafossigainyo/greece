@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Greek Travel</title>
+</head>
+
+<body>
+
+<!-- BANNER -->
+<div class="banner">
+  <div class="container">
+    <h1>Discover Greece 🇬🇷</h1>
+    <h2>Book your dream trip</h2>
+    <a href="#reservation" class="btn-blue">Book now</a>
+  </div>
+</div>
+
+<!-- DESTINATIONS -->
+<div class="container">
+
+  <h2>Our destinations</h2>
+
+  <div class="cards">
+
+    <div class="card" onclick="showInfo('mykonos')">
+      <img src="images/mykonos.jpg">
+      <h3>Mykonos</h3>
+    </div>
+
+    <div class="card" onclick="showInfo('santorini')">
+      <img src="images/santorin.jpg">
+      <h3>Santorini</h3>
+    </div>
+
+  </div>
+</div>
+
+<!-- INFOS VILLE -->
+<div id="info-section" class="hidden">
+  <div class="container">
+    <h2 id="city-title"></h2>
+    <p id="city-text"></p>
+    <img id="city-img" width="300px">
+  </div>
+</div>
+
+<!-- FORMULAIRE -->
+<div id="reservation">
+  <div class="container">
+    <h2>Book your trip ✈️</h2>
+
+    <form class="form">
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Your email" required>
+
+      <select>
+        <option>Mykonos</option>
+        <option>Santorini</option>
+      </select>
+
+      <button type="submit" class="btn-blue">Confirm booking</button>
+    </form>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
