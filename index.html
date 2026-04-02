@@ -1,72 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Greek Travel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css.css"> <title>Discover Greece | Luxury Travel</title>
 </head>
-
 <body>
 
-<!-- BANNER -->
-<div class="banner">
-  <div class="container">
-    <h1>Discover Greece 🇬🇷</h1>
-    <h2>Book your dream trip</h2>
-    <a href="#reservation" class="btn-blue">Book now</a>
-  </div>
-</div>
+    <header class="banner">
+        <div class="container">
+            <h1>Discover Greece 🇬🇷</h1>
+            <p>Experience the magic of the Mediterranean</p>
+            <a href="#reservation" class="btn-primary">Book your dream trip</a>
+        </div>
+    </header>
 
-<!-- DESTINATIONS -->
-<div class="container">
+    <main class="container">
+        <section class="destinations">
+            <h2 class="section-title">Our Popular Destinations</h2>
+            <div class="cards-grid">
+                <div class="card" onclick="showInfo('mykonos')">
+                    <div class="card-img-container">
+                        <img src="mykonos.jpg" alt="Mykonos">
+                    </div>
+                    <div class="card-content">
+                        <h3>Mykonos</h3>
+                        <span class="badge">Trendy</span>
+                    </div>
+                </div>
 
-  <h2>Our destinations</h2>
+                <div class="card" onclick="showInfo('santorini')">
+                    <div class="card-img-container">
+                        <img src="santorin.jpg" alt="Santorini">
+                    </div>
+                    <div class="card-content">
+                        <h3>Santorini</h3>
+                        <span class="badge">Romantic</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <div class="cards">
+        <section id="info-section" class="hidden">
+            <div class="info-card">
+                <h2 id="city-title"></h2>
+                <p id="city-text"></p>
+                <img id="city-img" src="" alt="Selected city">
+            </div>
+        </section>
 
-    <div class="card" onclick="showInfo('mykonos')">
-      <img src="images/mykonos.jpg">
-      <h3>Mykonos</h3>
-    </div>
+        <section id="reservation" class="booking-section">
+            <div class="form-container">
+                <h2>Book your trip ✈️</h2>
+                <form class="booking-form">
+                    <input type="text" placeholder="Your name" required>
+                    <input type="email" placeholder="Your email" required>
+                    <select>
+                        <option value="mykonos">Mykonos</option>
+                        <option value="santorini">Santorini</option>
+                    </select>
+                    <button type="submit" class="btn-submit">Confirm Booking</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-    <div class="card" onclick="showInfo('santorini')">
-      <img src="images/santorin.jpg">
-      <h3>Santorini</h3>
-    </div>
-
-  </div>
-</div>
-
-<!-- INFOS VILLE -->
-<div id="info-section" class="hidden">
-  <div class="container">
-    <h2 id="city-title"></h2>
-    <p id="city-text"></p>
-    <img id="city-img" width="300px">
-  </div>
-</div>
-
-<!-- FORMULAIRE -->
-<div id="reservation">
-  <div class="container">
-    <h2>Book your trip ✈️</h2>
-
-    <form class="form">
-      <input type="text" placeholder="Your name" required>
-      <input type="email" placeholder="Your email" required>
-
-      <select>
-        <option>Mykonos</option>
-        <option>Santorini</option>
-      </select>
-
-      <button type="submit" class="btn-blue">Confirm booking</button>
-    </form>
-
-  </div>
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
+</html>
 </html>
